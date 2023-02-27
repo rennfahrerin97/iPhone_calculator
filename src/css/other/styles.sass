@@ -1,0 +1,84 @@
+$bg_black: #000000
+$shadow: #4f4f4f
+$bg_white: #fdfdfd
+$light_grey: #a6a6a6
+$grey: #333333
+$dark_grey: #525151
+$middle_grey: #727272
+$orange: #ff9501
+
+.calc 
+	margin: 50px auto
+	width: 300px
+	height: 500px
+	border-radius: 20px
+	border: 1px solid $bg_black
+	font-family: Arial, Helvetica, sans-serif
+	padding: 18px
+	box-shadow: 4px 4px 4px $shadow
+	&-screen 
+		height: 125px
+		padding: 10px
+		display: grid
+		justify-items: end
+		align-items: end
+		margin-bottom: 25px
+		p 
+			text-align: right
+			font-size: 4rem
+			margin: 0
+		
+	
+
+.white .calc 
+	background: $bg_white
+	color: #000
+
+.black .calc 
+	background: $bg_black
+	color: $bg_white
+
+.buttons 
+	display: grid
+	grid-template-areas: "ac plus-minus percent division" "seven eight nine myltiply" "four five six minus" "one two three plus" "zero zero dot equal"
+	grid-gap: 7px
+	justify-items: center
+
+.btn 
+	width: 60px
+	height: 60px
+	border-radius: 50%
+	text-align: center
+	line-height: 60px
+	font-size: 1.5rem
+	cursor: pointer
+	user-select: none
+    
+	&.zero 
+		grid-area: zero
+		width: 100%
+		border-radius: 34px
+	
+	&:hover 
+		filter: brightness(120%)
+	
+	&:active 
+		filter: brightness(90%)
+	
+	&.bg-orange 
+		background: $orange
+	
+.white .btn 
+	background: $light_grey
+	&.bg-grey 
+		background: $dark_grey
+		color: $bg_white
+	
+
+.black .btn 
+	background: $grey
+	&.bg-grey 
+		background: $middle_grey
+		color: $bg_black
+	
+
